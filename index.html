@@ -58,10 +58,11 @@
 
 		<script>
 
-			window.onload = function() {
+			window.addEventListener("load", function() {
 				document.getElementById('apiForecastSubmit').addEventListener('click',apiForecastSubmit);
 				document.getElementById('awipsForecastSubmit').addEventListener('change',awipsForecastSubmit);
-			}
+			});
+			
 			function jsonEscape(str)  {	return str.replace(/\\n/g,'\n')	}
 			function populateText(data,id){ document.getElementById(id).innerHTML = jsonEscape(JSON.stringify(data,null,2)); }
 
